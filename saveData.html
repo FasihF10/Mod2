@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Storage</title>
+  <script>
+    function saveData() {
+        let dataArray = localStorage.getItem("dataArray");
+        if(!dataArray){
+            dataArray=[];
+        }
+        else{
+            dataArray = JSON.parse(dataArray);
+        }
+
+      var name = document.getElementById("name").value;
+      var number = document.getElementById("number").value;
+      var id = document.getElementById("id").value;
+
+      var newData = {
+        name: name,
+        number: number,
+        id: id,
+      };
+
+      dataArray.push(newData);
+
+      localStorage.setItem("data", JSON.stringify(dataArray));
+      document.getElementById("name").value = "";
+      document.getElementById("number").value = "";
+      document.getElementById("id").value = "";
+
+      
+    }
+    function clearData() {
+            localStorage.clear();
+    }
+  </script>
+</head>
+<body>
+  <h1>Local Storage</h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name"><br><br>
+  <label for="number">Number:</label>
+  <input type="text" id="number"><br><br>
+  <label for="id">ID:</label>
+  <input type="text" id="id"><br><br>
+  <button onclick="saveData()">Save Data</button>
+  <button onclick="clearData()">Clear Data</button>
+</body>
+</html>
