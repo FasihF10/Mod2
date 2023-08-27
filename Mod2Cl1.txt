@@ -7,3 +7,4 @@ git add (file name)
 git status (file name)
 git commit -m "comment (file name)"
 git log
+Make a new repository on git hub
