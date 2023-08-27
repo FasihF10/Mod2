@@ -11,3 +11,4 @@ Make a new repository on git hub
 connect repository with local repository by this link (git remote add origin https://github.com/FasihF10/Mod2.git)
 git config user.email "(Your Email)"
 git config user.name "(Your Username)"
+push your commits to github by (git push -u origin main)  
