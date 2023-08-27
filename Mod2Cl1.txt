@@ -1,0 +1,9 @@
+install git from google
+open terminal in vscode
+git --version
+git init
+git status (file name)
+git add (file name)
+git status (file name)
+git commit -m "comment (file name)"
+git log
